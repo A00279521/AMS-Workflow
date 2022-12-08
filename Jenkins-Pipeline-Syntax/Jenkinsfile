@@ -18,10 +18,11 @@ pipeline{
             }
             stage('Deploy Application'){
                 environment{
-                    DB_PASSWORD="password"
+                    DB_PASSWORD = credentials('DATABASE_PASSWORD')
                 }
-                steps{
-                    sh'''docker-compose pull
+                 steps {
+                withCredentials([string(credentialsId: 'DATABASE_PASSWORD', variable: 'DB_PASSWORD')]) {
+                    sh '''docker-compose pull
                     docker-compose up -d'''
                 }
             }
