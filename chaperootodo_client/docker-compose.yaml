@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   chaperoo-frontend:
-    image: "[nero123]/chaperoo-frontend:${app_version}"
+    image: [nero123]/chaperoo-frontend:${app_version}
     build: .
     ports:
       - target: 80
