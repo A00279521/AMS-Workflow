@@ -10,7 +10,7 @@ pipeline{
                     dir('chaperootodo_client') {
                     script{
                         if (env.rollback == 'false'){
-                            image = docker.build("nero123/chaperoo-frontend")
+                            image = docker.build("nero2013/chaperoo-frontend")
                         }
                     }
                     }
