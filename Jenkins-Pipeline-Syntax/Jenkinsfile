@@ -3,17 +3,17 @@ pipeline{
         stages{
             stage('Clone a git repo'){
                 steps{
-                    sh "git clone  https://gitlab.com/qacdevops/chaperootodo_client.git"
+                    sh '''git clone  git branch: \'main\', url: \'https://gitlab.com/qacdevops/chaperootodo_client.git\''''
                 }
             }
             stage('Install docker & docker compose'){
                 steps{
-                    sh  "sudo apt-get update"
-                    sh  "sudo apt install curl jq -y"
-                    sh  "curl https://get.docker.com | sudo bash"
-                    sh  'sudo usermod -aG docker $(whoami)'
-                    sh  'sudo curl -L "https://github.com/docker/compose/releases/download/v2.14.0/docker-compose-"$(uname -s)"-"$(uname -m)"" -o /usr/local/bin/docker-compose'
-                    sh  "sudo chmod +x /usr/local/bin/docker-compose"
+                    sh '''sudo apt-get update
+                          sudo apt install curl jq -y
+                          curl https://get.docker.com | sudo bash
+                          sudo usermod -aG docker $(whoami)
+                          sudo curl -L "https://github.com/docker/compose/releases/download/v2.14.0/docker-compose-"$(uname -s)"-"$(uname -m)"" -o /usr/local/bin/docker-compose
+                          sudo chmod +x /usr/local/bin/docker-compose'''
                 }
             }
             stage('Deploy Application'){
