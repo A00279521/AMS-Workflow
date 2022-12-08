@@ -21,7 +21,8 @@ pipeline{
                     DB_PASSWORD="password"
                 }
                 steps{
-                    sh "sudo docker-compose chaperootodo_client/docker-compose.yaml pull && sudo -E DB_PASSWORD=${DB_PASSWORD} docker-compose chaperootodo_client/docker-compose.yaml up -d"
+                    sh'''docker-compose pull
+                    docker-compose up -d'''
                 }
             }
         }
