@@ -28,7 +28,7 @@ pipeline{
                 }
             }
             stage('Deploy App'){
-                dir(' chaperootodo_client') {
+                (' chaperootodo_client') {
                 environment{
                     DB_PASSWORD="password"
                 }
