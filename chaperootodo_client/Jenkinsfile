@@ -33,7 +33,7 @@ pipeline{
                     DB_PASSWORD="password"
                 }
                 steps{
-                    dir(' chaperootodo_client') {
+                    dir('chaperootodo_client') {
                     sh "docker-compose pull && docker-compose up -d" 
                 }
                 }
