@@ -28,6 +28,9 @@ pipeline{
                 }
             }
             stage('Deploy App'){
+                environment{
+                    DB_PASSWORD="password"
+                }
                 steps{
                     sh "docker-compose pull && docker-compose up -d"
                 }
