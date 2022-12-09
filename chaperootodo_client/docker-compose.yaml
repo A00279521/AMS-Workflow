@@ -18,3 +18,5 @@ services:
     image: jordangrindrod/chaperoo-db
     environment:
       - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+
+      
