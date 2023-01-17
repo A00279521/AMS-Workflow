@@ -1,9 +1,19 @@
+# FROM openjdk:latest
+# COPY ./src/ /tmp
+# WORKDIR /tmp
+# RUN mvn clean install
+# EXPOSE 9966
+# ENTRYPOINT ["./mvnw spring-boot:run"]
+
+FROM maven:latest AS build-stage
+COPY . /build
+WORKDIR /build
+RUN mvn clean package
+
 FROM openjdk:latest
-COPY ./src/ /tmp
-WORKDIR /tmp
-RUN mvn clean install
-EXPOSE 9966
-ENTRYPOINT ["./mvnw spring-boot:run"]
+WORKDIR /temp
+COPY --from=build-stage /build/target/spring-petclinic-*.jar app.jar
+ENTRYPOINT ["/usr/bin/java", "-jar", "app.jar"]
 
 #
 # Build stage
