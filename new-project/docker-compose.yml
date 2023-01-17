@@ -14,24 +14,14 @@ services:
     ports:
     - target: 9966
       published: 9966 
-  # nginx:
-  #   image: nginx:latest
-  #   ports:
-  #   - target: 80
-  #     published: 80
-  #     protocol: tcp
-  #   volumes:
-  #   - type: bind
-  #     source: ./nginx/nginx.conf
-  #     target: /etc/nginx/nginx.conf
   mysql-petclinic-db:
-    image: mysql:5.7.8
+    image: mysql:5.7
     restart: always
     environment:
       MYSQL_DATABASE: 'mysql-petclinic-db'
-      MYSQL_USER: 'pc'
-      MYSQL_PASSWORD: 'petclinic'
-      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_USER: ${MY_PC}
+      MYSQL_PASSWORD: ${MY_PETCLINIC}
+      MYSQL_ROOT_PASSWORD: ${MY_PASSWORD}
     ports:
       - '3306:3306'
     expose:

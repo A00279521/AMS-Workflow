@@ -1,8 +1,9 @@
 FROM openjdk:latest
-COPY ./src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java/ /tmp
-WORKDIR /tmp 
+COPY ./src/ /tmp
+WORKDIR /tmp
+RUN mvn clean install
 EXPOSE 9966
-ENTRYPOINT ["java","PetClinicApplication.java"]
+ENTRYPOINT ["java","PetClinicApplication"]
 
 
 
