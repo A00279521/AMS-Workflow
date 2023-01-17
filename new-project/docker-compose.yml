@@ -31,7 +31,7 @@ services:
       MYSQL_DATABASE: 'mysql-petclinic-db'
       MYSQL_USER: 'pc'
       MYSQL_PASSWORD: 'petclinic'
-      # MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
     ports:
       - '3306:3306'
     expose:
