@@ -21,7 +21,7 @@ import javax.annotation.Generated;
 
 @Schema(name = "PetTypeFields", description = "Editable fields of a pet type.")
 @JsonTypeName("PetTypeFields")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-01-17T06:19:40.225547400Z[Europe/Dublin]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-01-17T12:33:20.816092600Z[Europe/Dublin]")
 public class PetTypeFieldsDto {
 
   @JsonProperty("name")
