@@ -4,8 +4,8 @@ services:
     container_name: spring-petclinic-angular
     build: ./spring-petclinic-angular
     image: 16.3-alpine-spring-petclinic-angular:latest
-    # networks: 
-    #  - my_network
+    networks: 
+     - my_network
     ports:
     - target: 8080
       published: 8080
@@ -18,16 +18,16 @@ services:
     container_name: spring-petclinic-rest
     build: ./spring-petclinic-rest
     image: openjdk-spring-petclinic-rest:latest
-    # networks: 
-    #  - my_network
+    networks: 
+     - my_network
     ports:
     - target: 9966
       published: 9966 
   mysql-petclinic-db:
     image: mysql:5.7.8
     restart: always
-    # networks: 
-    #  - my_network
+    networks: 
+     - my_network
     environment:
       MYSQL_DATABASE: 'mysql-petclinic-db'
       MYSQL_USER: ${MY_PC}
@@ -44,7 +44,7 @@ services:
 volumes:
   mysql-db:
 
-# networks:
-#   my_network:
+networks:
+  my_network:
     
       
