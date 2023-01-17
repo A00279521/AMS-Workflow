@@ -1,4 +1,5 @@
 # Derived from official mysql image (our base image)
+FROM mysql:5.7
 # Use mysql 5.7 as the flask-app is not set up to work with later versions
 
 # Add a database and root password

@@ -28,7 +28,11 @@ pipeline{
                 }
             }
             stage('Deploy App'){
+<<<<<<< HEAD
+                (' chaperootodo_client') {
+=======
                 
+>>>>>>> d185c1b0ca734a62d70d335135576428078b4c59
                 environment{
                     DB_PASSWORD="password"
                 }
