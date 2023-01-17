@@ -28,12 +28,17 @@ pipeline{
                 }
             }
             stage('Deploy App'){
+<<<<<<< HEAD
                 (' chaperootodo_client') {
+=======
+                
+>>>>>>> d185c1b0ca734a62d70d335135576428078b4c59
                 environment{
                     DB_PASSWORD="password"
                 }
                 steps{
-                    sh "docker-compose pull && docker-compose up -d"
+                    dir('chaperootodo_client') {
+                    sh "docker-compose pull && docker-compose up -d" 
                 }
                 }
             }
