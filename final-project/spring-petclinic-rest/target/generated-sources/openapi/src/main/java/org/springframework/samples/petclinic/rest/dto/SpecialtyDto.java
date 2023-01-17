@@ -21,7 +21,7 @@ import javax.annotation.Generated;
 
 @Schema(name = "Specialty", description = "Fields of specialty of vets.")
 @JsonTypeName("Specialty")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-01-16T21:17:28.560833300Z[Europe/Dublin]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-01-17T06:19:40.225547400Z[Europe/Dublin]")
 public class SpecialtyDto {
 
   @JsonProperty("id")

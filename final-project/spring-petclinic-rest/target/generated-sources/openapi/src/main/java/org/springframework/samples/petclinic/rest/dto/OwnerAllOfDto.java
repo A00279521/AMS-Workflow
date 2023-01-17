@@ -23,7 +23,7 @@ import javax.annotation.Generated;
  */
 
 @JsonTypeName("Owner_allOf")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-01-16T21:17:28.560833300Z[Europe/Dublin]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-01-17T06:19:40.225547400Z[Europe/Dublin]")
 public class OwnerAllOfDto {
 
   @JsonProperty("id")
