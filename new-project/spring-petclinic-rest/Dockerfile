@@ -6,8 +6,9 @@
 # ENTRYPOINT ["./mvnw spring-boot:run"]
 
 FROM maven:latest AS build-stage
-COPY . /build
 WORKDIR /build
+COPY . . 
+
 RUN mvn clean package
 
 FROM openjdk:latest
